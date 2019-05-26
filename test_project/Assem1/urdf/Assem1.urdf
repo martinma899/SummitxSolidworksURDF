@@ -1,0 +1,96 @@
+<robot
+  name="Assem1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.1798E-18 0.0037952 -7.83E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0539" />
+      <inertia
+        ixx="1.0144E-05"
+        ixy="1.469E-21"
+        ixz="4.8288E-22"
+        iyy="3.6677E-05"
+        iyz="4.5997E-22"
+        izz="3.4133E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="roller">
+    <inertial>
+      <origin
+        xyz="2.8436E-19 1.2143E-17 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.053952" />
+      <inertia
+        ixx="8.2258E-06"
+        ixy="1.7632E-38"
+        ixz="2.8359E-23"
+        iyy="1.3501E-05"
+        iyz="0"
+        izz="1.3501E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/roller.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem1/meshes/roller.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roller_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.02032"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="roller" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
