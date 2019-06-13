@@ -1,0 +1,267 @@
+<robot
+  name="summit_x_nowheel_test_export">
+  <link
+    name="chassis">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="23.289" />
+      <inertia
+        ixx="0.24907"
+        ixy="0"
+        ixz="0"
+        iyy="0.9089"
+        iyz="2.4467E-18"
+        izz="1.1192" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LF_suspension_link">
+    <inertial>
+      <origin
+        xyz="0.039975 -0.007095 -0.027991"
+        rpy="0 0 0" />
+      <mass
+        value="0.14802" />
+      <inertia
+        ixx="0.00023638"
+        ixy="-2.423E-05"
+        ixz="0.00025557"
+        iyy="0.00064833"
+        iyz="1.6966E-05"
+        izz="0.00042242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/LF_suspension_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/LF_suspension_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_suspension"
+    type="continuous">
+    <origin
+      xyz="0.11875 0 0.192"
+      rpy="-1.5708 9.6896E-17 1.2217" />
+    <parent
+      link="chassis" />
+    <child
+      link="LF_suspension_link" />
+    <axis
+      xyz="0 -1 0" />
+    <dynamics
+      damping="100000"
+      friction="100000" />
+  </joint>
+  <link
+    name="LB_suspension_link">
+    <inertial>
+      <origin
+        xyz="0.039975 -0.007095 -0.027991"
+        rpy="0 0 0" />
+      <mass
+        value="0.14802" />
+      <inertia
+        ixx="0.00023638"
+        ixy="-2.423E-05"
+        ixz="0.00025557"
+        iyy="0.00064833"
+        iyz="1.6966E-05"
+        izz="0.00042242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/LB_suspension_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/LB_suspension_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LB_suspension"
+    type="continuous">
+    <origin
+      xyz="-0.11875 0 0.192"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="chassis" />
+    <child
+      link="LB_suspension_link" />
+    <axis
+      xyz="0 -1 0" />
+    <dynamics
+      damping="100000"
+      friction="100000" />
+  </joint>
+  <link
+    name="RB_suspension_link">
+    <inertial>
+      <origin
+        xyz="0.039975 -0.007095 -0.027991"
+        rpy="0 0 0" />
+      <mass
+        value="0.14802" />
+      <inertia
+        ixx="0.00023638"
+        ixy="-2.423E-05"
+        ixz="0.00025557"
+        iyy="0.00064833"
+        iyz="1.6966E-05"
+        izz="0.00042242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/RB_suspension_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/RB_suspension_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RB_suspension"
+    type="continuous">
+    <origin
+      xyz="-0.11875 0 -0.192"
+      rpy="1.5708 1.818E-17 1.9199" />
+    <parent
+      link="chassis" />
+    <child
+      link="RB_suspension_link" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="100000"
+      friction="100000" />
+  </joint>
+  <link
+    name="RF_suspension_link">
+    <inertial>
+      <origin
+        xyz="0.039975 -0.007095 -0.027991"
+        rpy="0 0 0" />
+      <mass
+        value="0.14802" />
+      <inertia
+        ixx="0.00023638"
+        ixy="-2.423E-05"
+        ixz="0.00025557"
+        iyy="0.00064833"
+        iyz="1.6966E-05"
+        izz="0.00042242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/RF_suspension_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://summit_x_nowheel_test_export/meshes/RF_suspension_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_suspension"
+    type="continuous">
+    <origin
+      xyz="0.11875 0 -0.192"
+      rpy="1.5708 0 0" />
+    <parent
+      link="chassis" />
+    <child
+      link="RF_suspension_link" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="100000"
+      friction="100000" />
+  </joint>
+</robot>
